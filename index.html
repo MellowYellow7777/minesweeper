@@ -1,0 +1,98 @@
+<link href=minesweeper.css rel=stylesheet />
+<style>
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  width: 60px;
+  border: none;
+  font-size: 14px;
+  padding: 0;
+  outline: none;
+}
+
+input {
+  outline: none;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    height: 21px;
+    outline: none;
+}
+
+
+</style>
+<body style="background-color:black">
+<div id="game-menu-closed">
+  <button id="open" style="font-size: 14px; font-family: sans-serif; text-decoration: underline; color: white">Game</button>
+</div>
+<div id="game-menu-open" hidden>
+<table style="border-collapse: collapse;">
+<tbody style="font-family: sans-serif;">
+<tr style="background-color: #0065FF; color: white;">
+    <td style="text-indent: 5px;">Game</td>
+    <td></td><td></td>
+    <td style="display: flex; justify-content: end; padding: 0; height: 21px;">
+        <button id="x" style="color: white; width: 21px; font-size: 17px;">×</button>
+    </td>
+</tr>
+<tr style="background-color: #DDDDDD">
+  <td></td>
+  <td>Width</td>
+  <td>Height</td>
+  <td>Mines</td>
+</tr>
+<tr style="background-color: white;">
+  <td>
+    <input type="radio" id="beginner" name="game" value="beginner" checked>
+    <label for="beginner">Beginner</label>
+  </td>
+  <td>9</td>
+  <td>9</td>
+  <td>10</td>
+</tr>
+<tr style="background-color: white;">
+  <td>
+    <input type="radio" id="intermediate" name="game" value="intermediate">
+    <label for="intermediate" style="margin-right: 10px;">Intermediate</label>
+  </td>
+  <td>16</td>
+  <td>16</td>
+  <td>40</td>
+</tr>
+<tr style="background-color: white;">
+  <td>
+    <input type="radio" id="expert" name="game" value="expert">
+    <label for="expert">Expert</label>
+  </td>
+  <td>30</td>
+  <td>16</td>
+  <td>99</td>
+</tr>
+<tr style="background-color: white;">
+  <td>
+    <input type="radio" id="custom" name="game" value="custom">
+    <label for="custom">Custom</label>
+  </td>
+  <td><input type="number" id="custom-width" value="50"></td>
+  <td><input type="number" id="custom-height" value="50"></td>
+  <td><input type="number" id="custom-mines" value="500"></td>
+</tr>
+<tr style="background-color: #DDDDDD;">
+  <td><button id="newgame" style="font-size: 14px;">New Game</button></td>
+  <td></td><td></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+
+<canvas></canvas>
+<script src=minesweeper.js></script>
