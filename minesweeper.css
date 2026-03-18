@@ -1,0 +1,64 @@
+.outer {
+    position: absolute;
+    background-color: #C0C0C0;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #FFFFFF #7E7E7E #7E7E7E #FFFFFF;
+}
+
+.inner {
+    position: absolute;
+    background-color: #C0C0C0;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #7E7E7E #FFFFFF #FFFFFF #7E7E7E;
+}
+
+#frame {
+    width: 164px;
+    height: 206px;
+    left: 124px;
+    top: 8px;
+}
+
+#info {
+    left: 6px;
+    top: 6px;
+    width: 148px;
+    height: 36px;
+}
+
+#field {
+    left: 6px;
+    top: 48px;
+    width: 148px;
+    height: 148px;
+}
+
+.cell {
+    width: 16px;
+    height: 16px;
+}
+
+.active {
+    position: absolute;
+    background-color: #C0C0C0;
+    box-sizing: border-box;
+    border-width: 1px 0px 0px 1px;
+    border-style: solid;
+    border-color: #7E7E7E;
+}
+
+.cell > img {
+    position: absolute;
+    left: -2px;
+    top: -2px;
+}
+
+.active > img {
+    position: absolute;
+    left: -1px;
+    top: -1px;
+}
